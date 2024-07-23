@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
-const passport = require('passport');
+///const passport = require('passport');
 
 /**
  * -------------- GENERAL SETUP ----------------
@@ -20,10 +20,10 @@ require('./config/database');
 require('./models/user');
 
 // Pass the global passport object into the configuration function
-require('./config/passport')(passport);
+//require('./config/passport')(passport);
 
 // This will initialize the passport object on every request
-app.use(passport.initialize());
+//app.use(passport.initialize());
 
 // Instead of using body-parser middleware, use the new Express implementation of the same thing
 app.use(express.json());
